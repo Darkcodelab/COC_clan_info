@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>NEVER BACK DOWN</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header__left">
+          <div class="clan__name">
+            <h2>
+              <%=data.name%>
+              <div class="clan__tag"><%=data.tag%></div>
+            </h2>
+            <p class="clan__type"><%=data.type%></p>
+          </div>
+          <div class="clan__log">
+            <div class="clan__level_info">
+              <div class="clan__level">Level: <%=data.clanLevel%></div>
+              <div class="clan__points">Points: <%=data.clanPoints%></div>
+              <div class="clan__vspoints">
+                Versus Points: <%=data.clanVersusPoints%>
+              </div>
+            </div>
+            <div class="clan__war_info">
+              <div class="clan__war_wins">War Wins: <%=data.warWins%></div>
+              <div class="clan__war_ties">War Ties: <%=data.warTies%></div>
+              <div class="clan__war_losses">
+                War Losses: <%=data.warLosses%>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="clan__badge">
+            <img src="<%=data.badgeUrls.medium%>" alt="" />
+          </div>
+          <div class="clan__location"><%=data.location.name%></div>
+          <div class="clan__labels">
+            <div class="clan__label">
+              <img src="<%=data.labels[0].iconUrls.small%>" alt="" />
+            </div>
+            <div class="clan__label">
+              <img src="<%=data.labels[1].iconUrls.small%>" alt="" />
+            </div>
+            <div class="clan__label">
+              <img src="<%=data.labels[2].iconUrls.small%>" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--prettier-ignore-->
+      <div class="member__body">
+        <h2>Clan Members</h2>
+        <div class="members__container">
+          <% data.memberList.forEach( mem => { %> 
+            <%- include("./partials/members", {mem}) %> 
+          <% }) %>
+        </div>
+        <br />
+        <h2>War Log</h2>
+        <div class="warlog__container">
+          <% warLog.items.forEach( war => { %> 
+            <%- include("./partials/warInfo",{data: war, moment}) %>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

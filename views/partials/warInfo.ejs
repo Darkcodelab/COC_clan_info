@@ -1,0 +1,63 @@
+<!-- prettier-ignore -->
+
+<div class="war">
+  <div class="war__teamsize"><span class="title">Team Size: </span><%=data.teamSize%></div>
+  <div
+    class="
+      <%=data.result
+      ==
+      'lose'
+      ?
+      'war__opponent war--win'
+      :
+      'war__opponent war--lose'%>
+    "
+  >
+    <div class="war__opponent_badge">
+      <img src="<%=data.opponent.badgeUrls.small%>" alt="" />
+    </div>
+    <div class="war__opponent_name">
+      <%=data.opponent.name%>
+      <div class="war__opponent_tag"><%=data.opponent.tag%></div>
+    </div>
+    <div class="war__clan_level">
+      <span class="title">Level: </span><%=data.opponent.clanLevel%>
+    </div>
+    <div class="war__clan_level">
+      <span class="title">Stars: </span><%=data.opponent.stars%>
+    </div>
+    <div class="war__clan_destruction">
+      <span class="title">Destruction:</span>
+      <%=data.opponent.destructionPercentage%>%
+    </div>
+  </div>
+  <div
+    class="
+      <%=data.result
+      ==
+      'lose'
+      ?
+      'war__ourClan war--lose'
+      :
+      'war__ourClan war--win'%>
+    "
+  >
+    <div class="war__ourClan_badge">
+      <img src="<%=data.clan.badgeUrls.small%>" alt="" />
+    </div>
+    <div class="war__ourClan_name">
+      <%=data.clan.name%>
+      <div class="war__ourClan_tag"><%=data.clan.tag%></div>
+    </div>
+    <div class="war__clan_level">
+      <span class="title">Level: </span><%=data.clan.clanLevel%>
+    </div>
+    <div class="war__clan_level">
+      <span class="title">Stars: </span><%=data.clan.stars%>
+    </div>
+    <div class="war__clan_destruction">
+      <span class="title">Destruction %:</span>
+      <%=data.clan.destructionPercentage%>%
+    </div>
+  </div>
+</div>

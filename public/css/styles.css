@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/******************************/
+/** Clash of Clans Font **/
+/** Credits to Supercell **/
+/** http://www.supercell.net **/
+/******************************/
+@font-face {
+  font-family: "clashregular";
+  src: url("/fonts/clash-regular-webfont.woff2") format("woff2"),
+    url("/fonts/clash-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "clashregular", "Poppins", sans-serif;
+}
+
+.header {
+  padding: 1em 0.3em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clan__name h2 {
+  font-weight: bolder;
+  font-size: 32px;
+}
+
+.clan__name span {
+  margin-left: 5px;
+}
+
+.clan__tag {
+  font-size: 16px;
+  color: rgb(167, 167, 167);
+  font-weight: lighter;
+}
+
+.clan__type {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.clan__log {
+  margin-top: 20px;
+}
+
+.clan__level_info,
+.clan__war_info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clan__level_info div,
+.clan__war_info div {
+  margin: 10px 1em;
+  padding: 12px 18px;
+  border-top: 2px solid white;
+  background: linear-gradient(to bottom, #87c735, #32c12c);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: white;
+  font-weight: lighter;
+}
+
+.clan__war_info div {
+  background: linear-gradient(to bottom, #00a5f9, #3e58bb);
+}
+
+.clan__level_info div:first-child,
+.clan__war_info div:first-child,
+.clan__level_info div:last-child,
+.clan__war_info div:last-child {
+  margin-left: 0;
+}
+
+.header__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clan__labels {
+  margin-top: 10px;
+  display: flex;
+}
+
+.clan__location {
+  font-weight: bolder;
+  font-size: 19px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+  .header__right {
+    flex-direction: row;
+    align-items: center;
+  }
+  .clan__location {
+    margin: 0 2em;
+  }
+  .header__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .clan__name h2 {
+    font-size: 26px;
+  }
+
+  /* MEMBERS */
+
+  .member__body h2 {
+    text-align: center;
+  }
+  .member {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .member > div {
+    margin-top: 10px;
+  }
+  .member div:first-child {
+    margin-top: 0;
+  }
+
+  /* MEMBERS */
+}
+
+/*MEMBERS*/
+
+.member__body {
+  margin-bottom: 30px;
+}
+
+.member__body h2 {
+  margin-top: 40px;
+}
+
+.members__container,
+.warlog__container {
+  max-width: 1040px;
+  padding: 20px;
+  margin: 2em auto 0;
+  height: 500px;
+  overflow-y: auto;
+  border: 1px solid lightgray;
+}
+
+.member {
+  display: flex;
+  margin: 1em 0;
+  padding: 8px;
+  color: black;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: lighter;
+  background: linear-gradient(to bottom, #d8d8d8, #c7c7c7);
+}
+
+.member__name sup a {
+  color: #3e58bb;
+}
+.member__tag {
+  color: rgb(92, 92, 92);
+  font-size: 12px;
+}
+span.mem__title,
+.title {
+  font-size: 12px;
+  width: 100px;
+}
+
+.member__league {
+  display: flex;
+  align-items: center;
+}
+
+.member__rank {
+  margin-right: 5px;
+}
+
+/*MEMBERS*/
+
+/*WARLOG*/
+
+.war--lose {
+  background: linear-gradient(to bottom, #d40c00, #f04815);
+}
+.war--win {
+  background: linear-gradient(to bottom, #32c12c, #009888);
+}
+
+.war:first-child {
+  margin-top: 1em;
+}
+
+.war {
+  padding: 16px 12px;
+  margin: 3em 0 0;
+  background: #d7d7d7;
+  border-bottom: 1px solid lightgray;
+  border-radius: 10px;
+  color: white;
+}
+
+.war__teamsize {
+  color: black;
+}
+
+.war__opponent,
+.war__ourClan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.war__opponent {
+  margin: 0 0 16px 0;
+}
+
+/*WARLOG*/

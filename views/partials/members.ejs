@@ -1,0 +1,39 @@
+<div class="member">
+  <div class="member__league">
+    <div class="member__rank"><%=mem.clanRank%></div>
+    <img src="<%=mem.league.iconUrls.small%>" alt="" />
+  </div>
+  <div class="member__name">
+    <p>
+      <%=mem.name%><sup
+        ><a href="/clanMember/<%=mem.tag.slice(1)%>">view</a></sup
+      >
+    </p>
+    <div class="member__tag"><%=mem.tag%></div>
+  </div>
+  <div class="member__info">
+    <div class="member__role">
+      <span class="mem__title">Role</span>: <%=mem.role%>
+    </div>
+    <div class="member__exp">
+      <span class="mem__title">Level</span>: <%=mem.expLevel%>
+    </div>
+  </div>
+  <div class="member__donations_info">
+    <div class="member__donations">
+      <span class="mem__title">Donations</span>: <%=mem.donations%>
+    </div>
+    <div class="member__donation--received">
+      <span class="mem__title">Donations received</span>:
+      <%=mem.donationsReceived%>
+    </div>
+  </div>
+  <div class="member__trophies_info">
+    <div class="member__trophies">
+      <span class="mem__title">Trophies</span>: <%=mem.trophies%>
+    </div>
+    <div class="member__vsTrophies">
+      <span class="mem__title">BuilderTrophies</span>: <%=mem.versusTrophies%>
+    </div>
+  </div>
+</div>
